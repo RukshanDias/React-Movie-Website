@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <div className='search_nav'>
-        <div>
+        <div className='title'>
           <h1>Movies</h1>
         </div>
 
