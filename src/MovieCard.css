@@ -4,9 +4,33 @@
 }
 .card{
     width: 15rem;
-    margin-right: 1.5rem;
+    max-height: 26.5rem;
+    margin-right: 3.3rem;
     margin-bottom: 1.5rem;
+    background-color: rgb(130, 50, 30);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
 }
 .poster img{
     width: 15rem;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.overview{
+    transform: translateY(100%);
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: aquamarine;
+    padding: 1rem;
+    overflow: hidden;
+    margin-top: 3rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.25s ease-in-out;
+}
+.card:hover .overview{
+    transform: translateY(0%);
 }
