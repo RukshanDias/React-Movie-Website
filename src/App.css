@@ -19,3 +19,25 @@
 .title{
     padding-right: 3rem;
 }
+.title h1{
+  color: whitesmoke;
+}
+
+.searchBox input{
+  border: 0;
+  outline: 0;
+  margin-right: 0.5rem;
+  height: 1.5rem;
+  padding: 0 0.3rem;
+  border-radius: 0.5rem;
+
+}
+
+.searchBox button{
+  border: 0;
+  outline: 0;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+}
