@@ -1,4 +1,5 @@
 import './App.css';
+import MovieCard from './MovieCard';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -7,8 +8,8 @@ function App() {
 
   useEffect(() => {
     fetch(API_URL)
-    .then(res => res.json())
-    .then(data => setMovies(data.results))
+      .then(res => res.json())
+      .then(data => setMovies(data.results))
   }, []);
 
   console.log(movies)
@@ -22,14 +23,16 @@ function App() {
 
         <div>
           <form>
-            <input/>
+            <input />
             <button>Search</button>
           </form>
         </div>
       </div>
 
       <div className='movies'>
-        
+        {movies.map((movie) => (
+          <MovieCard  {...movie}/>
+        ))}
       </div>
     </div>
   );
