@@ -1,0 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
