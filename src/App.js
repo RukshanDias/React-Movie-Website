@@ -12,6 +12,7 @@ function App() {
     fetch(API_URL)
       .then(res => res.json())
       .then(data => setMovies(data.results))
+    document.title = "Movie Website"
   }, []);
 
   console.log(movies)
