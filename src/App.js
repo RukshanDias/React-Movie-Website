@@ -18,7 +18,7 @@ function App() {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    console.log("printing searched data" + API_SEARCH+term)
+    console.log("printing searched data" + API_SEARCH + term)
     fetch(API_SEARCH + term)
       .then(res => res.json())
       .then(data => setMovies(data.results))
@@ -41,9 +41,12 @@ function App() {
       </div>
 
       <div className='movies'>
-        {movies.map((movie, i) => (
-          <MovieCard  {...movie} key={i}/>
-        ))}
+        {movies.length === 0
+          ? <h1>No results</h1>
+          : movies.map((movie, i) => (
+            <MovieCard  {...movie} key={i} />
+          ))
+        }
       </div>
     </div>
   );
