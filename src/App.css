@@ -5,11 +5,16 @@
 }
 .App{
     padding: 1.5rem;
-    background-color: rgb(50,50, 130);
+    background-color: #439A97;
 }
 .movies {
   display: flex;
   flex-wrap: wrap;
+}
+.movies h1{
+  font-size: 5rem;
+  position: absolute;
+  transform: translate(140%, 100%);
 }
 .search_nav{
     display: flex;

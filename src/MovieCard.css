@@ -7,7 +7,7 @@
     max-height: 26.5rem;
     margin-right: 3.3rem;
     margin-bottom: 3rem;
-    background-color: rgb(130, 50, 30);
+    background-color: #3883c0;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -26,7 +26,7 @@
     transform: translateY(100%);
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-    background-color: aquamarine;
+    background-color: #CBEDD5;
     padding: 1rem;
     overflow: hidden;
     margin-top: 3rem;
