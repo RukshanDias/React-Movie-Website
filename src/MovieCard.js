@@ -3,12 +3,12 @@ import './MovieCard.css'
 import noImgFound_img from './no_img_found.png'
 
 const MovieCard = (props) => {
-    const API_IMG = `${process.env.REACT_APP_API_IMG}`;
+    const API_IMG = `${process.env.REACT_APP_API_IMG}`
 
     return (
         <div className='card'>
             <div className='poster'>
-                <img src={props.poster_path ? API_IMG + props.poster_path : noImgFound_img} alt={props.title}/>
+                <img src={props.poster_path ? API_IMG + props.poster_path : noImgFound_img} alt={props.title} />
             </div>
 
             <div className='info'>

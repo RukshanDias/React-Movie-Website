@@ -3,8 +3,8 @@ import MovieCard from './MovieCard';
 import { useState, useEffect } from 'react';
 
 function App() {
-  const API_URL = `${process.env.REACT_APP_API_URL}`;;
-  const API_SEARCH = `${process.env.REACT_APP_API_SEARCH}`;
+  const API_URL = `${process.env.REACT_APP_API_URL}`
+  const API_SEARCH = `${process.env.REACT_APP_API_SEARCH}`
   const [movies, setMovies] = useState([]);
   const [term, setTerm] = useState('')
 
