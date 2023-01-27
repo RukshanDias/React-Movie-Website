@@ -3,7 +3,7 @@ import './MovieCard.css'
 import noImgFound_img from './no_img_found.png'
 
 const MovieCard = (props) => {
-    const API_IMG = "https://image.tmdb.org/t/p/w500/"
+    const API_IMG = `${process.env.REACT_APP_API_IMG}`;
 
     return (
         <div className='card'>

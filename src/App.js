@@ -3,8 +3,8 @@ import MovieCard from './MovieCard';
 import { useState, useEffect } from 'react';
 
 function App() {
-  const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=ae379cb0563dd1623d39e23df8e5d2e5";
-  const API_SEARCH = "https://api.themoviedb.org/3/search/movie?api_key=ae379cb0563dd1623d39e23df8e5d2e5&query="
+  const API_URL = `${process.env.REACT_APP_API_URL}`;;
+  const API_SEARCH = `${process.env.REACT_APP_API_SEARCH}`;
   const [movies, setMovies] = useState([]);
   const [term, setTerm] = useState('')
 
