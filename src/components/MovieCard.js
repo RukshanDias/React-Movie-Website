@@ -1,6 +1,6 @@
 import React from 'react'
 import './MovieCard.css'
-import noImgFound_img from './no_img_found.png'
+import noImgFound_img from '../no_img_found.png'
 
 const MovieCard = (props) => {
     const API_IMG = `${process.env.REACT_APP_API_IMG}`

@@ -4,12 +4,14 @@
   font-family: sans-serif;
 }
 .App{
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     background-color: #439A97;
 }
 .movies {
   display: flex;
   flex-wrap: wrap;
+  padding: 1.5rem;
+
 }
 .movies h1{
   font-size: 5rem;
@@ -19,7 +21,8 @@
 .search_nav{
     display: flex;
     align-items: center;
-    padding-bottom: 1.5rem;
+    background-color: antiquewhite;
+    padding: 1.5rem;
 }
 .title{
     padding-right: 3rem;

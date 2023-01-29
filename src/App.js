@@ -1,5 +1,6 @@
 import './App.css';
-import MovieCard from './MovieCard';
+import MovieCard from './components/MovieCard';
+import GenreSelect from './components/GenreSelect';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
         <div className='title'>
           <h1>Movies</h1>
         </div>
-
+        <GenreSelect />
         <div className='searchBox'>
           <form onSubmit={handleSearch}>
             <input onChange={(e) => setTerm(e.target.value)} />
