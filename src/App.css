@@ -3,49 +3,94 @@
   margin: 0;
   font-family: sans-serif;
 }
-.App{
-    /* padding: 1.5rem; */
-    background-color: #439A97;
+.App {
+  /* padding: 1.5rem; */
+  background-color: #439a97;
 }
 .movies {
   display: flex;
   flex-wrap: wrap;
   padding: 1.5rem;
-
 }
-.movies h1{
+.movies h1 {
   font-size: 5rem;
   position: absolute;
   transform: translate(140%, 100%);
 }
-.search_nav{
-    display: flex;
-    align-items: center;
-    background-color: antiquewhite;
-    padding: 1.5rem;
+.search_nav {
+  display: flex;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 1.5rem;
 }
-.title{
-    padding-right: 3rem;
+.title {
+  padding-right: 3rem;
 }
-.title h1{
+.title h1 {
   color: whitesmoke;
 }
 
-.searchBox input{
+.searchBox input {
   border: 0;
   outline: 0;
   margin-right: 0.5rem;
   height: 1.5rem;
   padding: 0 0.3rem;
   border-radius: 0.5rem;
-
 }
 
-.searchBox button{
+.searchBox button {
   border: 0;
   outline: 0;
   padding: 0.3rem;
   border-radius: 0.5rem;
   background-color: white;
   cursor: pointer;
+}
+
+.GenreSelect {
+  position: absolute;
+  top: 4.5rem;
+  right: 1.5rem;
+  width: 120px;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  z-index: 2;
+}
+
+.GenreSelect::before{
+  content: '';
+  position: absolute;
+  top: -0.7rem;
+  right: 1.1rem;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: white;
+  border-left: 1px solid gray;
+  border-radius: 1px solid gray;
+}
+
+.GenreSelect ul{
+  list-style: none;
+  cursor: pointer;
+}
+
+.GenreSelect ul li:hover{
+  background-color: aquamarine;
+  transition: all 300ms ease-in-out;
+}
+
+.genre{
+  padding: 0.7rem 1.5rem;
+  background-color: #439a97;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.genre:hover{
+  filter: brightness(130%);
+  transition: all 300ms ease-in-out;
 }
