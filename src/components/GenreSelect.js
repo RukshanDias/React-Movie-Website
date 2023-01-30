@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { AiFillCaretDown } from "react-icons/ai";
 
 
 const menuItems = [
@@ -8,35 +9,52 @@ const menuItems = [
         id: 12
     },
     {
-        title: 'Adventure',
-        id: 12
+        title: 'Action',
+        id: 28
     },
     {
-        title: 'Adventure',
-        id: 12
+        title: 'Comedy',
+        id: 35
     },
     {
-        title: 'Adventure',
-        id: 12
+        title: 'Family',
+        id: 10751
+    },
+    {
+        title: 'Science Fiction',
+        id: 878
+    },
+    {
+        title: 'Animation',
+        id: 16
     },
 ]
 
-const toggleGenreSelect = () => {
 
-}
 
 const GenreSelect = (props) => {
-    const [genre, setGenre] = useState('Select')
     const [isGenreOpen, setIsGenreOpen] = useState(false)
+    const API_GENRE = `${process.env.REACT_APP_API_GENRE}`
+    const handleGenre = (item) => {
+        console.log(item)
+        props.changeGenre(item.title)
+        fetch(API_GENRE + item.id)
+            .then(res => res.json())
+            .then(data => props.changeMovies(data.results))
+        console.log(API_GENRE + item.id)
+    }
+
 
     return (
         <React.Fragment>
-            <div className='genre' onClick={() => setIsGenreOpen(!isGenreOpen)}>{genre}</div>
+            <div className='genre' onClick={() => setIsGenreOpen(!isGenreOpen)}>
+                {props.movieGenre} <AiFillCaretDown />
+            </div>
             {isGenreOpen &&
                 <div className='GenreSelect'>
                     <ul>
                         {menuItems.map(item => (
-                            <li> {item.title} </li>
+                            <li onClick={() => handleGenre(item)}> {item.title} </li>
                         ))}
                     </ul>
                 </div>}
