@@ -4,30 +4,12 @@ import { AiFillCaretDown } from "react-icons/ai";
 
 
 const menuItems = [
-    {
-        title: 'Adventure',
-        id: 12
-    },
-    {
-        title: 'Action',
-        id: 28
-    },
-    {
-        title: 'Comedy',
-        id: 35
-    },
-    {
-        title: 'Family',
-        id: 10751
-    },
-    {
-        title: 'Science Fiction',
-        id: 878
-    },
-    {
-        title: 'Animation',
-        id: 16
-    },
+    { title: 'Adventure', id: 12 },
+    { title: 'Action', id: 28 },
+    { title: 'Comedy', id: 35 },
+    { title: 'Family', id: 10751 },
+    { title: 'Science Fiction', id: 878 },
+    { title: 'Animation', id: 16 },
 ]
 
 
@@ -38,9 +20,11 @@ const GenreSelect = (props) => {
     const handleGenre = (item) => {
         console.log(item)
         props.changeGenre(item.title)
+        props.changeLoading(true)
         fetch(API_GENRE + item.id)
             .then(res => res.json())
             .then(data => props.changeMovies(data.results))
+            .then(() => props.changeLoading(false))
         console.log(API_GENRE + item.id)
     }
 
@@ -54,7 +38,7 @@ const GenreSelect = (props) => {
                 <div className='GenreSelect'>
                     <ul>
                         {menuItems.map(item => (
-                            <li onClick={() => handleGenre(item)}> {item.title} </li>
+                            <li key={item.id} onClick={() => handleGenre(item)}> {item.title} </li>
                         ))}
                     </ul>
                 </div>}
