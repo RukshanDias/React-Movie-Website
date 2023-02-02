@@ -4,9 +4,12 @@
   margin: 0;
   font-family: sans-serif;
 }
+body {
+  background: linear-gradient(to right, #1a70a9, #77d9fd);
+}
 .App {
   /* padding: 1.5rem; */
-  background-color: #439a97;
+  background: linear-gradient(to right, #1a70a9, #77d9fd);
 }
 .movies {
   display: flex;
@@ -17,12 +20,14 @@
   font-size: 5rem;
   font-family: "Itim";
   position: absolute;
-  transform: translate(140%, 100%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
 }
 .search_nav {
   display: flex;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: #333745;
   padding: 1.5rem;
 }
 .title {
@@ -30,6 +35,7 @@
 }
 .title h1 {
   color: whitesmoke;
+  cursor: pointer;
 }
 
 .searchBox input {
@@ -37,24 +43,25 @@
   outline: 0;
   margin-right: 0.5rem;
   height: 1.5rem;
-  padding: 0 0.3rem;
+  padding: 0.2rem 0.3rem;
   border-radius: 0.5rem;
+  font-size: 16px;
 }
 
 .searchBox button {
   border: 0;
   outline: 0;
-  padding: 0.3rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: white;
   cursor: pointer;
 }
-
+/* Genre selection */
 .GenreSelect {
   position: absolute;
   top: 4.5rem;
-  right: 19.5rem;
-  width: 120px;
+  right: 26.5rem;
+  width: 130px;
   padding: 15px;
   border: 1px solid black;
   border-radius: 8px;
@@ -71,8 +78,8 @@
   height: 20px;
   transform: rotate(45deg);
   background-color: white;
-  border-left: 1px solid gray;
-  border-radius: 1px solid gray;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .GenreSelect ul {
@@ -80,15 +87,20 @@
   cursor: pointer;
 }
 
+.GenreSelect ul li {
+  transition: all 300ms ease-in-out;
+  margin-bottom: 3px;
+}
 .GenreSelect ul li:hover {
-  background-color: aquamarine;
+  color: rgb(12, 112, 79);
+  font-size: 18px;
   transition: all 300ms ease-in-out;
 }
 
 .genre {
   padding: 0.7rem 1.5rem;
-  margin: 0 7rem 0 50rem;
-  background-color: #439a97;
+  margin: 0 7rem 0 43rem;
+  background-color: whitesmoke;
   border-radius: 12px;
   cursor: pointer;
 }
@@ -98,13 +110,35 @@
   transition: all 300ms ease-in-out;
 }
 
-@media only screen and (max-width: 2100px) {
+@media only screen and (max-width: 1500px) {
   .genre {
     margin: 0 5rem 0 35rem;
   }
+  .search_nav h1 {
+    color: red;
+  }
 }
-@media only screen and (max-width: 1700px) {
+@media only screen and (max-width: 1300px) {
   .genre {
     margin: 0 3rem 0 25rem;
+  }
+  .search_nav h1 {
+    color: green;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .genre {
+    margin: 0 3rem 0 15rem;
+  }
+  .search_nav h1 {
+    color: rgb(128, 0, 55);
+  }
+}
+@media only screen and (max-width: 930px) {
+  .genre {
+    margin: 0 7rem 0 5rem;
+  }
+  .search_nav h1 {
+    color: orange;
   }
 }

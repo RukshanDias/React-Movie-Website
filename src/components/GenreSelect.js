@@ -25,6 +25,7 @@ const GenreSelect = (props) => {
             .then(res => res.json())
             .then(data => props.changeMovies(data.results))
             .then(() => props.changeLoading(false))
+        setIsGenreOpen(false)
         console.log(API_GENRE + item.id)
     }
 

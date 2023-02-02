@@ -11,14 +11,16 @@ function App() {
   const [genre, setGenre] = useState('Select')
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
+  useEffect(() => Home(), []);
+
+  const Home = () => {
     setLoading(true)
     fetch(API_URL)
       .then(res => res.json())
       .then(data => setMovies(data.results))
       .then(() => setLoading(false))
-    document.title = "Movie Website"
-  }, []);
+    setGenre('Select')
+  }
 
   const handleSearch = (e) => {
     e.preventDefault()
@@ -35,9 +37,9 @@ function App() {
     <div className="App">
       <div className='search_nav'>
         <div className='title'>
-          <h1>Movies</h1>
+          <h1 onClick={() => Home()}>Movies</h1>
         </div>
-        <GenreSelect movieGenre={genre} changeGenre={setGenre} changeMovies={setMovies} changeLoading={setLoading}/>
+        <GenreSelect movieGenre={genre} changeGenre={setGenre} changeMovies={setMovies} changeLoading={setLoading} />
         <div className='searchBox'>
           <form onSubmit={handleSearch}>
             <input onChange={(e) => setTerm(e.target.value)} />

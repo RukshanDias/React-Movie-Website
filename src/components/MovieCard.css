@@ -7,7 +7,7 @@
     max-height: 26.5rem;
     margin-right: 3.3rem;
     margin-bottom: 3rem;
-    background-color: #3883c0;
+    background-color: #333745;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -21,12 +21,13 @@
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
+    color: whitesmoke;
 }
 .overview{
     transform: translateY(100%);
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-    background-color: #CBEDD5;
+    background-color: #c3baba;
     padding: 1rem;
     overflow: hidden;
     margin-top: 3rem;
