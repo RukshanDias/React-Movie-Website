@@ -32,7 +32,7 @@ const GenreSelect = (props) => {
 
     return (
         <React.Fragment>
-            <div className='genre' onClick={() => setIsGenreOpen(!isGenreOpen)}>
+            <div className='genre' onClick={() => setIsGenreOpen(!isGenreOpen)} onTouchStart={() => setIsGenreOpen(!isGenreOpen)}>
                 {props.movieGenre} <AiFillCaretDown />
             </div>
             {isGenreOpen &&
